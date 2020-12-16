@@ -1,4 +1,4 @@
-package JavaEurche;
+package Server;
 
 /**
  * Hello world!

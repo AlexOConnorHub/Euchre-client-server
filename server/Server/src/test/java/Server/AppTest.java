@@ -1,4 +1,4 @@
-package JavaEurche;
+package Server;
 
 import org.junit.jupiter.api.Test;
 
