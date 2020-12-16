@@ -2,13 +2,19 @@
 import bottle, json
 
 # my module imports
-import deck, logic
+import game, logic
 
 # global variabls
 serverIP = "localhost"
 serverPort = 8080
-public = 'public/'
-private = 'private/'
+public = 'server/public/'
+private = 'server/private/'
+numberOfRooms = 4
+games = []
+
+# Make rooms
+for _ in range(numberOfRooms):
+    games += game.game()
 
 # Make a play
 @bottle.route('/euchre/play', method="POST")
@@ -20,6 +26,12 @@ def play():
 def sendToPeople():
     bottle.response.content_type = 'text/event-stream'
     yield whatsHappening()
+
+# Sit at table
+@bottle.route('/euchre/<table>:int')
+def sitDown(table):
+    if 
+
 
 application = bottle.default_app()
 
