@@ -7,12 +7,10 @@
     <script type="text/javascript" src="/js/euchre.js"></script>
 </head>
 
-<body>
+<body onload="loadPage()">
     <h1>Please find a table to play euchre</h1>
-    <button type="button" onclick="joinTable(1)">Join this table</button><span id="table1">1/4</span><br><br>
-    <button type="button" onclick="joinTable(2)">Join this table</button><span id="table1">2/4</span><br><br>
-    <button type="button" onclick="joinTable(3)">Join this table</button><span id="table1">3/4</span><br><br>
-    <button type="button" onclick="joinTable(4)">Join this table</button><span id="table1">4/4</span><br><br>
+    <span id="templateButtons" class="template"><button type="button" id="tableBtn" onclick="joinTable(1)">Join this table</button> <span id="howFull">1/4</span> <img src="/images/emptyTable.png"></span>
+    <div id="tables"></div>
 </body>
 
 </html>

@@ -14,7 +14,7 @@ games = []
 
 # Make rooms
 for _ in range(numberOfRooms):
-    games += game.game()
+    games.append(game.game())
 
 # Make a play
 @bottle.route('/euchre/play', method="POST")
@@ -28,10 +28,20 @@ def sendToPeople():
     yield whatsHappening()
 
 # Sit at table
-@bottle.route('/euchre/<table>:int')
+@bottle.route('/euchre/<table:int>')
 def sitDown(table):
-    if 
+    if games[table].howManySitting() != 4:
+        return { 'state' : True }
+    else:
+        return { 'state' : False }
 
+# Get table count
+@bottle.route('/euchre/tables')
+def getTables():
+    final = []
+    for game in games:
+        final.append(str(game.howManySitting()))
+    return json.dumps(final)
 
 application = bottle.default_app()
 

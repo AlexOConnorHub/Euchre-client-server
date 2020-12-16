@@ -65,7 +65,8 @@ class game():
         self.deck = deck(9)
         self.turn = 0
         self.dealer = 0
-        self.deal()
+        self.newDeal()
+        self.sitting = 0
 
     def __str__(self):
         final = ""
@@ -109,3 +110,9 @@ class game():
 
     def nextTurn(self):
         self.turn = (self.turn + 1) % 4
+    
+    def sitDown(self):
+        self.sitting += 1
+
+    def howManySitting(self) -> int:
+        return self.sitting
