@@ -2,8 +2,9 @@ joinTable = async function(tableNumber) {
     stillFree = await fetch('/euchre/' + tableNumber).then(res => res.json()).then()
     if (!stillFree) {
         window.location.reload(true)
+    } else {
+        window.location.replace('/html/euchreGame.html')
     }
-
 }
 
 loadPage = async function() {
