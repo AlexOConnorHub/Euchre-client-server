@@ -10,13 +10,13 @@ class card():
         return self.suit[0]
 
     def getPicture(self):
-        if self.value == 10:
-            return(f'/images/cards/J{self.suit[0]}.png')
         if self.value == 11:
-            return(f'/images/cards/Q{self.suit[0]}.png')
+            return(f'/images/cards/J{self.suit[0]}.png')
         if self.value == 12:
-            return(f'/images/cards/K{self.suit[0]}.png')
+            return(f'/images/cards/Q{self.suit[0]}.png')
         if self.value == 13:
+            return(f'/images/cards/K{self.suit[0]}.png')
+        if self.value == 14:
             return(f'/images/cards/A{self.suit[0]}.png')
         else:
             return(f'/images/cards/{self.value}{self.suit[0]}.png')

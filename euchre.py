@@ -7,8 +7,8 @@ import game, logic
 # global variabls
 serverIP = "localhost"
 serverPort = 8080
-public = 'server/public/'
-private = 'server/private/'
+public = 'public/'
+private = 'private/'
 numberOfRooms = 4
 games = []
 
