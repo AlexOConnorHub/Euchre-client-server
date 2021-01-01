@@ -1,2 +1,4 @@
 # Euchre-client-server
-This is a Java Euchre project that employs client/server style networking
+This is a work in progress.
+
+End goal: working euchre website
